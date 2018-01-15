@@ -1,0 +1,139 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
+
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <GridPane alignment="CENTER">
+            <HBox>
+                <Button text="Home" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Button text="Account" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Button text="Login" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            </HBox>
+        </GridPane>
+    </top>
+
+    <bottom>
+        <GridPane alignment="CENTER">
+            <HBox>
+                <Button fx:id="saveButton" text="Save" GridPane.rowIndex="0" GridPane.columnIndex="0" onAction="#saveButtonClicked"/>
+                <Button fx:id="clearButton" text="Clear" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Button text="Third Button" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            </HBox>
+        </GridPane>
+    </bottom>
+
+    <center>
+        <GridPane alignment="CENTER">
+            <Label text="Is this money reserved for anything other purpose?" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="moneyBox" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="5. No"/>
+                        <String fx:value="4. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="2. Probably"/>
+                        <String fx:value="1. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Is there anything else that I would rather spend it on?" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <ComboBox fx:id="ratherBox" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="5. No"/>
+                        <String fx:value="4. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="2. Probably"/>
+                        <String fx:value="1. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Will this purchase allow me to obtain a character that I like?" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <ComboBox fx:id="characterBox" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. No"/>
+                        <String fx:value="2. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="4. Probably"/>
+                        <String fx:value="5. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Will this help me in the arena?" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            <ComboBox fx:id="arenaBox" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. No"/>
+                        <String fx:value="2. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="4. Probably"/>
+                        <String fx:value="5. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Will this help me in Raids?" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+            <ComboBox fx:id="raidBox" GridPane.columnIndex="0" GridPane.rowIndex="9">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. No"/>
+                        <String fx:value="2. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="4. Probably"/>
+                        <String fx:value="5. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Will this help my guild in TB?" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+            <ComboBox fx:id="tbBox" GridPane.columnIndex="0" GridPane.rowIndex="11">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. No"/>
+                        <String fx:value="2. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="4. Probably"/>
+                        <String fx:value="5. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Will this help my guild in TW?" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+            <ComboBox fx:id="twBox" GridPane.columnIndex="0" GridPane.rowIndex="13">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. No"/>
+                        <String fx:value="2. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="4. Probably"/>
+                        <String fx:value="5. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="Will this allow me to simply have more fun?" GridPane.columnIndex="0" GridPane.rowIndex="14"/>
+            <ComboBox fx:id="funBox" GridPane.columnIndex="0" GridPane.rowIndex="15">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. No"/>
+                        <String fx:value="2. Probably Not"/>
+                        <String fx:value="3. Maybe"/>
+                        <String fx:value="4. Probably"/>
+                        <String fx:value="5. Yes"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label text="" fx:id="endResult" GridPane.columnIndex="0" GridPane.rowIndex="16"/>
+        </GridPane>
+    </center>
+
+
+</BorderPane>
